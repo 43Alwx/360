@@ -229,6 +229,64 @@
             padding: 4rem 0;
         }
 
+        /* Services Hero Section with Full Width Background */
+        .services-hero {
+            position: relative;
+            width: 100vw;
+            height: 80vh;
+            margin: 1rem 0 12rem 0;
+            overflow: visible;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-hero::before {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            content: '';
+            background-image: url('zim/AdobeStock_303845906-1280x640.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .services-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4rem;
+            color: white;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services-content h1 {
+            font-size: 8em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'ICA Rubrik';
+        }
+
+        .services-content .right {
+            background: rgba(0,0,0,0.4);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+
+        .services-content .right h2 {
+            color: #ff6b35;
+        }
+
         .content-banner {
             display: flex;
             justify-content: space-between;
@@ -767,46 +825,60 @@
             </div>
         </section>
 
+        <!-- Services Introduction Content -->
+        <section class="services-description" style="margin: 16rem 0 1rem 0; padding: 4rem 2rem; text-align: center;">
+            <div class="autoShow" style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="font-size: 3.5em; color: #25283B; margin-bottom: 2rem; font-family: 'ICA Rubrik';">Why Choose Zimbo Travel 360?</h2>
+                <p style="font-size: 1.3em; line-height: 1.8; color: #555; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    With over a decade of experience in Zimbabwe tourism, we provide comprehensive travel solutions that go beyond ordinary trips. From the moment you contact us until you return home, every detail is carefully planned to ensure your journey is seamless, safe, and unforgettable.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-top: 4rem;">
+                    <div class="autoShow" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #ff6b35, #e55a2b); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2em; color: white;">🎧</div>
+                        <h3 style="color: #ff6b35; margin-bottom: 1rem; font-size: 1.5em;">24/7 Support</h3>
+                        <p style="color: #666; line-height: 1.6;">Round-the-clock assistance for all your travel needs, from booking to emergency support during your trip.</p>
+                    </div>
+
+                    <div class="autoShow" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #ff6b35, #e55a2b); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2em; color: white;">🛟</div>
+                        <h3 style="color: #ff6b35; margin-bottom: 1rem; font-size: 1.5em;">Safety First</h3>
+                        <p style="color: #666; line-height: 1.6;">All our tours include comprehensive insurance, safety briefings, and experienced guides who prioritize your wellbeing.</p>
+                    </div>
+
+                    <div class="autoShow" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #ff6b35, #e55a2b); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2em; color: white;">🏆</div>
+                        <h3 style="color: #ff6b35; margin-bottom: 1rem; font-size: 1.5em;">Local Expertise</h3>
+                        <p style="color: #666; line-height: 1.6;">Born and raised in Zimbabwe, our team knows hidden gems and authentic experiences you won't find elsewhere.</p>
+                    </div>
+
+                    <div class="autoShow" style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #ff6b35, #e55a2b); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2em; color: white;">💰</div>
+                        <h3 style="color: #ff6b35; margin-bottom: 1rem; font-size: 1.5em;">Best Value</h3>
+                        <p style="color: #666; line-height: 1.6;">Premium experiences at competitive prices, with transparent pricing and no hidden fees or surprise costs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Travel Services Section -->
-        <section class="content-section" id="services">
-            <div class="content-banner autoShow">
-                <h1 class="left">OUR SERVICES</h1>
+        <section class="services-hero" id="services">
+            <div class="services-content">
+                <h1 class="left autoShow">OUR SERVICES</h1>
                 <div class="right autoShow">
                     <h2>COMPLETE TRAVEL</h2>
                     <p>End-to-end solutions</p>
                     <p>From flight booking to local transport,<br>we handle every detail of your Zimbabwe journey</p>
                     <button onclick="showContactInfo('services')" style="margin-top: 15px; padding: 10px 20px; background: #ff6b35; color: white; border: none; border-radius: 20px; font-weight: bold; cursor: pointer; transition: all 0.3s ease;">View All Services</button>
                 </div>
-                <div class="image autoShow">
-                    <img src="zim/AdobeStock_303845906-1280x640.jpg" alt="Zimbabwe Landscape">
-                </div>
             </div>
         </section>
 
-        <section class="services-intro" style="margin: 6rem 0; text-align: center;">
-            <h2 class="autoShow" style="font-size: 4em; color: #25283B; margin-bottom: 3rem; font-family: 'ICA Rubrik';">Travel Services</h2>
-            <div style="display: flex; justify-content: center; gap: 4rem; align-items: center; flex-wrap: wrap;">
-                <div class="service-highlight autoShow" style="text-align: center; max-width: 300px;">
-                    <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 1rem; box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);">
-                        <img src="zim/Devils-Pools-Vic-Falls-14.jpg" alt="Victoria Falls Tours" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <h3 style="color: #ff6b35; margin-bottom: 0.5rem;">Adventure Tours</h3>
-                    <p style="color: #25283B;">Experience the thrill of Victoria Falls and Zimbabwe's natural wonders</p>
-                </div>
-                <div class="service-highlight autoShow" style="text-align: center; max-width: 300px;">
-                    <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 1rem; box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);">
-                        <img src="zim/impala.jpg" alt="Wildlife Safaris" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <h3 style="color: #ff6b35; margin-bottom: 0.5rem;">Wildlife Safaris</h3>
-                    <p style="color: #25283B;">Get close to Zimbabwe's incredible wildlife in their natural habitat</p>
-                </div>
-            </div>
-        </section>
 
         <section class="grid grid-2">
             <div class="autoShow">
                 <figure>
-                    <img src="zim/Ruins-Great-Zimbabwe.jpg.webp" alt="Cultural Tours">
+                    <img src="zim/flightBooking.png" alt="Flight Booking Services">
                 </figure>
                 <h3 style="color: #ff6b35; margin: 10px 0;">Flight Booking</h3>
                 <p>
@@ -815,14 +887,17 @@
                 <button onclick="showContactInfo('flights')" style="margin-top: 10px; padding: 8px 16px; background: transparent; color: #ff6b35; border: 2px solid #ff6b35; border-radius: 15px; font-weight: bold; cursor: pointer;">Book Flights</button>
             </div>
             <div class="autoShow">
-                <h3 style="color: #ff6b35; margin: 10px 0;">Local Transport</h3>
-                <p>From airport transfers to safari vehicles, we provide reliable transportation options throughout Zimbabwe. Choose from private cars, guided tour buses, or 4WD vehicles for off-road adventures to remote destinations.</p>
-                <button onclick="showContactInfo('transport')" style="margin-top: 10px; padding: 8px 16px; background: transparent; color: #ff6b35; border: 2px solid #ff6b35; border-radius: 15px; font-weight: bold; cursor: pointer;">View Transport</button>
+                <figure>
+                    <img src="zim/luxury.jpg" alt="Luxury Tour Packages">
+                </figure>
+                <h3 style="color: #ff6b35; margin: 10px 0;">Tour Packages</h3>
+                <p>Expertly crafted itineraries covering Victoria Falls, wildlife safaris, cultural experiences, and historical sites. Each package includes guided tours, meals, and insider access to Zimbabwe's hidden gems.</p>
+                <button onclick="showContactInfo('tours')" style="margin-top: 10px; padding: 8px 16px; background: transparent; color: #ff6b35; border: 2px solid #ff6b35; border-radius: 15px; font-weight: bold; cursor: pointer;">Browse Tours</button>
             </div>
 
             <div class="autoShow">
                 <figure>
-                    <img src="zim/Zimbo-Kitchen-Sadza.jpg" alt="Cultural Experience">
+                    <img src="zim/accomodation.jpg" alt="Luxury Accommodation">
                 </figure>
                 <h3 style="color: #ff6b35; margin: 10px 0;">Accommodation</h3>
                 <p>
@@ -832,11 +907,11 @@
             </div>
             <div class="autoShow">
                 <figure>
-                    <img src="zim/Fashion-Rev-1.png" alt="Zimbabwe Culture">
+                    <img src="zim/tourGuide.jpg" alt="Professional Tour Guide">
                 </figure>
-                <h3 style="color: #ff6b35; margin: 10px 0;">Tour Packages</h3>
-                <p>Expertly crafted itineraries covering Victoria Falls, wildlife safaris, cultural experiences, and historical sites. Each package includes guided tours, meals, and insider access to Zimbabwe's hidden gems.</p>
-                <button onclick="showContactInfo('tours')" style="margin-top: 10px; padding: 8px 16px; background: transparent; color: #ff6b35; border: 2px solid #ff6b35; border-radius: 15px; font-weight: bold; cursor: pointer;">Browse Tours</button>
+                <h3 style="color: #ff6b35; margin: 10px 0;">Local Transport</h3>
+                <p>From airport transfers to safari vehicles, we provide reliable transportation options throughout Zimbabwe. Choose from private cars, guided tour buses, or 4WD vehicles for off-road adventures to remote destinations.</p>
+                <button onclick="showContactInfo('transport')" style="margin-top: 10px; padding: 8px 16px; background: transparent; color: #ff6b35; border: 2px solid #ff6b35; border-radius: 15px; font-weight: bold; cursor: pointer;">View Transport</button>
             </div>
         </section>
 
